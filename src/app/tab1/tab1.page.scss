@@ -1,0 +1,50 @@
+.card-post{
+    width: 100%;
+    margin: 0;
+}
+
+ion-card-footer{
+    display: block;
+    padding: 0 16px 16px 16px;
+
+}
+.avatar{
+    border-radius: 100%;
+}
+.header-icons{
+    text-align: right;
+    .item{
+        width: 35px;
+        //margin-right: 10px;
+    }
+}
+
+
+ion-item{
+    display: inline-block;
+}
+
+.item-post{
+    ion-icon{
+        width: 30px;
+    }
+}
+
+ion-text{
+    display:inline-block;
+    color: white;
+    margin: 0 10px;
+}
+
+ion-input{
+    display: inline-block;
+    width: auto;
+}
+.slider-stories{
+    height: 120px;
+    ion-slide{
+        width: 100px !important;
+    }
+}
+
+
