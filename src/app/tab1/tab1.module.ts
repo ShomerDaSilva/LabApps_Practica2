@@ -17,4 +17,23 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
   ],
   declarations: [Tab1Page]
 })
-export class Tab1PageModule {}
+export class Tab1PageModule {
+
+  slideOpts ={
+    initialSlide: 1,
+    speed: 400,
+    slidesPerView: 5,
+    freeMode: true,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true
+    }
+  }
+  slidePostOptions = {
+    slidesPerView: 2
+  }
+  constructor(){};
+}
