@@ -64,118 +64,67 @@
   </ion-row>
 
 
+
+
+
+
+
+
+
+
+
+  <!--posts-->
+  <ion-row>
+    <ion-col>
+      <ion-card *ngFor="let post of posts" class="post">
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <img src="{{post.avatarUsuario}}" alt="foto perfil" width="20px" class="avatar" >
+                <ion-text>
+                  <strong>{{post.usuario}}</strong>
+                </ion-text>              
+              </ion-col>
+              <ion-col size="1">
+                <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
   
-  <ion-row>
-    <ion-card class="card-post">
-      <ion-card-header>
-        <ion-grid>
-          <ion-row>
-            <ion-col size="11" >
-              <img src="..//../assets/images/Stories/Ruffles (2).png" alt="foto perfil" width="20px" class="avatar" >
-              <ion-text>
-                <strong>Ruffles</strong>
-              </ion-text>
-              
-            </ion-col>
-            <ion-col size="1">
-              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
+          <ion-card-content>
+            <img src="{{post.imagenPost}}" alt="" class="postImg">
+            <p>{{post.descripcionPost}}</p>
 
-
-      </ion-card-header>
-      <ion-card-content>
-        <ion-slides [options]="slidePostOptions" pager="true">
-         <ion-slide>
-          <img src="..//..//assets/images/Feed/morgan-aragon-BFyTdSthQDA-unsplash 1.png" alt="auto" width=100%>
-         </ion-slide>
-         <ion-slide>
-          <img src="..//..//assets/images/Feed/morgan-aragon-BFyTdSthQDA-unsplash 1.png" alt="auto" width=100%>
-         </ion-slide>
-         <ion-slide>
-          <img src="..//..//assets/images/Feed/morgan-aragon-BFyTdSthQDA-unsplash 1.png" alt="auto" width=100%>
-         </ion-slide>
-        </ion-slides>
-      </ion-card-content>
-      <div class="footer">
-        <div class="options">
-          <ion-grid>
-            <ion-row>
-              <ion-col size="11">
-                <ion-icon name="heart-outline" class="item"></ion-icon>
-                <ion-icon name="chatbubble-outline" class="item"></ion-icon>
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </ion-col>
-              <ion-col size="1">
-                <ion-icon name="bookmark-outline"></ion-icon>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-
-        </div>
-        <div class="comment">
-          <ion-grid>
-            <img src="..//../assets/images/Stories/Ruffles (2).png" alt="foto perfil" width="20px" class="avatar">
-            <ion-input placeholder="Escribir un cometario"></ion-input>
-          </ion-grid>
-        </div>
-        
-      </div>
-    </ion-card>
+           <!--  <img src="..//..//assets/images/Feed/.png" alt="auto" width=100%> -->
+            
+          </ion-card-content>
+  
+          <div class="footer">
+            <div class="options">
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="11">
+                    <ion-icon name="heart-outline" class="item"></ion-icon>
+                    <ion-icon name="chatbubble-outline" class="item"></ion-icon>
+                    <ion-icon name="paper-plane-outline"></ion-icon>
+                  </ion-col>
+                  <ion-col size="1">
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+    
+            </div>
+            <div class="comment">           
+                <img src="..//../assets/images/Stories/Ruffles (2).png" alt="foto perfil" width="20px" class="avatar">
+                <ion-input placeholder="Escribir un cometario"></ion-input>
+            </div>
+            
+          </div>
+      </ion-card>
+    </ion-col>
   </ion-row>
 
-  <ion-row>
-   <ion-col>
-    <ion-card class="card-post">
-      <ion-card-header>
-        <ion-grid>
-          <ion-row>
-            <ion-col size="11" >
-              <img src="..//../assets/images/Stories/Ruffles (2).png" alt="foto perfil" width="20px" class="avatar" >
-              <ion-text>
-                <strong>Ruffles</strong>
-              </ion-text>
-              
-            </ion-col>
-            <ion-col size="1">
-              <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-
-
-      </ion-card-header>
-      <ion-card-content>
-        <img src="..//..//assets/images/Feed/morgan-aragon-BFyTdSthQDA-unsplash 1.png" alt="auto" width=100%>
-      </ion-card-content>
-      <div class="card-footer">
-        <div class="options">
-          <ion-grid>
-            <ion-row>
-              <ion-col size="11">
-                <ion-icon name="heart-outline" class="item"></ion-icon>
-                <ion-icon name="chatbubble-outline" class="item"></ion-icon>
-                <ion-icon name="paper-plane-outline"></ion-icon>
-              </ion-col>
-              <ion-col size="1">
-                <ion-icon name="bookmark-outline"></ion-icon>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-
-        </div>
-        <div class="comment">
-          <ion-grid>
-            <img src="..//../assets/images/Stories/Ruffles (2).png" alt="foto perfil" width="20px" class="avatar">
-            <ion-input placeholder="Escribir un cometario"></ion-input>
-          </ion-grid>
-        </div>
-        
-      </div>
-    </ion-card>
-   </ion-col>
-  </ion-row>
 </ion-grid>
 
   <app-explore-container name="Tab 1 page"></app-explore-container>
