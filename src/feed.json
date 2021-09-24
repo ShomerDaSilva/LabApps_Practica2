@@ -30,28 +30,32 @@
             "usuario": "ruffles",
             "imagenPost": "../../assets/images/Feed/morgan-aragon-BFyTdSthQDA-unsplash 1.png",
             "avatarUsuario": "../../assets/images/Ruffles.png",
-            "descripcionPost": "<3 <3 <3 holiwis"
+            "descripcionPost": "<3 <3 <3 holiwis",
+            "likes": 23
         },
         {
             "id": 2,
             "usuario": "max",
             "imagenPost": "../../assets/images/Feed/f3.png",
             "avatarUsuario": "../../assets/images/Ruffles.png",
-            "descripcionPost": "<3 <3 <3 holiwis"
+            "descripcionPost": "<3 <3 <3 holiwis",
+            "likes": 78
         },
         {
             "id": 3,
             "usuario": "Picafresa<3",
             "imagenPost": "../../assets/images/Feed/f1.png",
             "avatarUsuario": "../../assets/images/Ruffles.png",
-            "descripcionPost": "<3 <3 <3 holiwis"
+            "descripcionPost": "<3 <3 <3 holiwis",
+            "likes": 2
         },
         {
             "id": 4,
             "usuario": "Shomer",
             "imagenPost": "../../assets/images/Feed/f2.jfif",
             "avatarUsuario": "../../assets/images/Ruffles.png",
-            "descripcionPost": "<3 <3 <3 holiwis"
+            "descripcionPost": "<3 <3 <3 holiwis",
+            "likes": 200
         }
     ]
 }

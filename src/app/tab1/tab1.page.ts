@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Output } from '@angular/core';
 import feed  from '../../feed.json';
 
-interface Publicaciones{
+export interface Publicaciones{
   id: number;
   usuario: String;
   imagenPost: String;
   avatarUsuario: String;
   descripcionPost: String;
+  likes: number;
 }
 @Component({
   selector: 'app-tab1',
@@ -15,7 +16,7 @@ interface Publicaciones{
 })
 export class Tab1Page {
 
-  posts: Publicaciones[] = feed.feed;
+  @Output() posts: Publicaciones[] = feed.feed;
   constructor() {}
 
 }
