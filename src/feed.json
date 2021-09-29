@@ -1,0 +1,61 @@
+{
+    "usuario":{
+        
+            "nombre": "maxelsolovino",
+            "seguidores": 2000000,
+            "siguiendo": 200,
+            "posts": 12,
+            "bio": "Hola soy Max y soy un perro feliz :D",
+            "avatar": "Ruffles.png",
+            "publicaciones": [
+              "p1.png",
+              "p2.png",
+              "p3.png",
+              "p4.png",
+              "p5.png",
+              "p6.png",
+              "p7.png",
+              "p8.png",
+              "p9.png",
+              "p10.png",
+              "p11.png",
+              "p12.png"
+            ]
+          
+    },
+
+    "feed": [
+        {
+            "id": 1,
+            "usuario": "ruffles",
+            "imagenPost": "../../assets/images/Feed/morgan-aragon-BFyTdSthQDA-unsplash 1.png",
+            "avatarUsuario": "../../assets/images/Ruffles.png",
+            "descripcionPost": "<3 <3 <3 holiwis",
+            "likes": 23
+        },
+        {
+            "id": 2,
+            "usuario": "max",
+            "imagenPost": "../../assets/images/Feed/f3.png",
+            "avatarUsuario": "../../assets/images/Ruffles.png",
+            "descripcionPost": "<3 <3 <3",
+            "likes": 78
+        },
+        {
+            "id": 3,
+            "usuario": "Picafresa<3",
+            "imagenPost": "../../assets/images/Feed/f1.png",
+            "avatarUsuario": "../../assets/images/Ruffles.png",
+            "descripcionPost": "Hola Mundo!",
+            "likes": 2
+        },
+        {
+            "id": 4,
+            "usuario": "Shomer",
+            "imagenPost": "../../assets/images/Feed/f2.jfif",
+            "avatarUsuario": "../../assets/images/Ruffles.png",
+            "descripcionPost": "el mejor",
+            "likes": 200
+        }
+    ]
+}
