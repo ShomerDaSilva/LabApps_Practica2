@@ -17,7 +17,7 @@
     <img src="{{post.imagenPost}}" alt="" class="postImg">
     <p>{{post.descripcionPost}}</p>
 
-   <!--  <img src="..//..//assets/images/Feed/.png" alt="auto" width=100%> -->
+
     
   </ion-card-content>
 
@@ -28,7 +28,7 @@
           <p>{{post.likes}} me gustas</p>
           <ion-col size="11">
             <app-likes (liked)="opPostLiked($event)" [post_back]="postB"></app-likes>
-            <!--<ion-icon name="heart-outline" class="item"></ion-icon>-->
+          
             <ion-icon name="chatbubble-outline" class="item-post"></ion-icon>
             <ion-icon name="paper-plane-outline" class="item-post"></ion-icon>
           </ion-col>
@@ -45,4 +45,6 @@
     </div>
     
   </div>
-</ion-card> 
+</ion-card>
+
+

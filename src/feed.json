@@ -38,7 +38,7 @@
             "usuario": "max",
             "imagenPost": "../../assets/images/Feed/f3.png",
             "avatarUsuario": "../../assets/images/Ruffles.png",
-            "descripcionPost": "<3 <3 <3 holiwis",
+            "descripcionPost": "<3 <3 <3",
             "likes": 78
         },
         {
@@ -46,7 +46,7 @@
             "usuario": "Picafresa<3",
             "imagenPost": "../../assets/images/Feed/f1.png",
             "avatarUsuario": "../../assets/images/Ruffles.png",
-            "descripcionPost": "<3 <3 <3 holiwis",
+            "descripcionPost": "Hola Mundo!",
             "likes": 2
         },
         {
@@ -54,7 +54,7 @@
             "usuario": "Shomer",
             "imagenPost": "../../assets/images/Feed/f2.jfif",
             "avatarUsuario": "../../assets/images/Ruffles.png",
-            "descripcionPost": "<3 <3 <3 holiwis",
+            "descripcionPost": "el mejor",
             "likes": 200
         }
     ]
