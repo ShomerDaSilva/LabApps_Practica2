@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import datosUsuario from '../../feed.json';
+
 interface Usuario{
   nombre: String;
   seguidores: number;
@@ -20,6 +21,11 @@ export class Tab3Page {
 
   usuario: Usuario = datosUsuario.usuario;
 
+  siguiendo: boolean = true;
+
+  toggleFollow(): void {
+    this.siguiendo = !this.siguiendo;
+  }
   constructor() {}
 
 }

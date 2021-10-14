@@ -1,9 +1,10 @@
-import { Component, Output, Query } from '@angular/core';
-//import { Firestore, collectionData, collection } from '@angular/fire/firestore';
-import {Database, objectVal, ref} from '@angular/fire/database';
-import {HttpClient} from '@angular/common/http'
+import { Component, OnInit, Output } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+
+
+import {AngularFirestore } from '@angular/fire/compat/firestore';
+
 import { Observable } from 'rxjs';
-import feed  from '../../feed.json';
 
 export interface Publicaciones{
   id: number;
@@ -18,22 +19,17 @@ export interface Publicaciones{
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit{
 
-  //@Output() posts: Publicaciones[] = feed.feed;
-  getDataBase(){
-    //this.bd.list('/');
+  //@Output() posts: Publicaciones[] = feed.feed
+
+  usuarios$: Observable<any>[];//Observable<Item[];
+
+  constructor(db: AngularFirestore) {
     
   }
-
-  usuarios$: AngularFireList<any[]>//Observable<Item[];
-
-  constructor(private b_d: Database) {
-    const bd = ref(b_d, 'prueba');
-    this.usuarios$ = objectVal(bd).pipe(trace(b_d));
-  }
   ngOnInit(){
-    this.getDataBase();
+    
   }
 }
 
