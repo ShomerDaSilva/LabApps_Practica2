@@ -1,0 +1,78 @@
+<ion-button fill="outline" (click)="crearPublicacion(infoTest)">Crear Nueva Publicacion</ion-button>
+<ion-button fill="outline" (click)="eliminarPublicaciones()"> Eliminar Todas las publicaciones</ion-button>
+
+<ion-card  *ngFor="let post of publicacionesArreglo" class="post">
+  <ion-grid>
+    <ion-row>
+      <ion-col class="flex-box">
+       <img src="../../assets/images/avatar.jpg" alt="foto de perfil" width="20px" class="avatar">
+       <ion-text class="centrar-username">
+         <strong>{{post.usuario}}</strong>
+       </ion-text>
+      </ion-col>
+      <ion-col size="1">
+       <ion-icon name="ellipsis-horizontal-outline" (click)="mostrarPopUp( $event )"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card-content>
+   <!-- <img [src]="urlImagen(post.urlImagen)" alt="" class="postImg">-->
+   <img src="{{post.urlImagen}}" alt="">
+    <p>{{post.descripcionPost}}</p>
+    
+   
+  </ion-card-content>
+  <div class="footer">
+    <div class="options">
+     
+    <ion-grid>
+      <ion-row>
+        <ion-col size="11">
+         <div *ngIf="post.like" class="post-icon">
+          <ion-icon name="heart" class="item-post" (click)="toggleLike(post.key, post.like)" ></ion-icon> 
+         </div>
+         <div  *ngIf="!post.like" class="post-icon">
+          <ion-icon name="heart-outline" class="item-post" (click)="toggleLike(post.key, post.like)"></ion-icon> 
+         </div>
+          <div class="post-icon">
+            <ion-icon name="chatbubble-outline" class="item-post" (click)="escribirComentario(post.key)"></ion-icon>
+          </div>
+          <div class="post-icon">
+            <ion-icon name="paper-plane-outline" class="item-post"></ion-icon>
+          </div>
+        </ion-col>
+        
+        <ion-col size="1">
+          <div class="post-icon" *ngIf="!post.guardado">
+            <ion-icon name="bookmark-outline" (click)="guardarPublicacion(post.key, post.guardado)"></ion-icon>
+          </div>
+          <div class="post-icon" *ngIf="post.guardado">
+            <ion-icon name="bookmark" (click)="guardarPublicacion(post.key, post.guardado)"></ion-icon>
+          </div>
+        </ion-col>
+       </ion-row>
+    </ion-grid>
+
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div class="comment flex-box">
+            <img src="../../assets/images/avatar.jpg" alt="avatar" width="20px" height="20px">
+            <ion-input placeholder="Escribir un comentario" size="50" class="comment-input" id="comment-{{post.key}}"></ion-input>
+          </div>
+        </ion-col>
+        
+        <ion-col>
+          <ion-button (click)="borrarPost(post.key)" fill="outline">Borrar Post</ion-button>
+        </ion-col>
+
+
+      </ion-row>
+    </ion-grid>
+    
+  </div>
+</ion-card>
+
+

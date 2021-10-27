@@ -1,0 +1,30 @@
+.post-icon {
+    display: inline-block;
+    margin-right: 10px;
+    ion-icon {
+        height: 25px;
+        width: 25px;
+    }
+}
+
+.comment {
+    * {
+        display: inline-block;
+    }
+    
+}
+
+.flex-box {
+    display: flex;
+    &.comment {
+        align-items: center;
+    }
+}
+
+img.avatar {
+    margin-right: 10px;
+}
+
+.comment-input {
+    vertical-align: top;
+}

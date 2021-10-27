@@ -1,0 +1,14 @@
+<h3>Crear Publicacion</h3>
+
+<ion-label>description</ion-label>
+<ion-input type="text" placeholder="Escribe un pie de foto"  [(ngModel)]="caption"></ion-input>
+{{caption}} <br>
+<ion-label>Imagen</ion-label>
+<ion-input type="text" placeholder="ruta de imagen" [(ngModel)]="imagenUrl"></ion-input>
+{{imagenUrl}} <br>
+
+<ion-label>usuario</ion-label>
+<ion-input type="text" placeholder="usuario que postea" [(ngModel)]="usuario"></ion-input>
+{{usuario}}
+<br>
+<ion-button fill="outline" (click)="crearPost()">Crear Publicacion</ion-button>
