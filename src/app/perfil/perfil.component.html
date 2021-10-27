@@ -1,0 +1,77 @@
+<ion-row class="usuario">
+  <ion-col>
+    <div id="profilepicBorde">
+      <img src="../../assets/images/{{avatar}}" alt="foto de perfil" id="profilepic">
+    </div>
+  </ion-col>
+
+  <ion-col class="datos">
+    <ion-label class="bold">{{posts}}</ion-label>
+    <ion-label>Posts</ion-label>
+  </ion-col>
+
+  <ion-col class="datos">
+    <ion-label class="bold">{{seguidores}} </ion-label>
+    <ion-label>Followers</ion-label>
+  </ion-col>
+
+  <ion-col class="datos">
+    <ion-label class="bold"> {{siguiendo}} </ion-label>
+    <ion-label>Following</ion-label>
+  </ion-col>
+
+</ion-row>
+
+
+<ion-row class="descripcion">
+  <ion-col>
+    <ion-label class="nombre">
+      Max
+    </ion-label>
+    <ion-label>
+      {{bio}}
+      <br>
+      <a href="#">Link</a>
+    </ion-label>
+    <!--<ion-button *ngIf="esUsuario" fill="outline">Editar Perfil</ion-button>-->
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button fill="outline" (click)="toggleEditar()">{{editando ? 'Cancelar': 'Editar Perfil' }}</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button fill="outline">Mensaje</ion-button>
+        </ion-col>
+        <ion-col size="3">
+          <ion-button fill="outline">Email</ion-button>
+        </ion-col>
+        <ion-col size="2">
+          <ion-button fill="outline"><ion-icon name="chevron-down-outline"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <!--<ion-button fill="outline" (click)="agregarPublicacion(infoTest)">Agregar Publicacion</ion-button>-->
+        <!--<ion-button fill="outline" (click)="obtenerPublicaciones()">Obtener Publicaciones</ion-button>-->
+      </ion-row>
+    </ion-grid>
+
+  </ion-col>
+</ion-row>
+
+<ion-row id="posts">
+  <ion-col class="inner-posts">
+
+    <ion-grid>
+     <ion-row>
+      <ion-col *ngFor="let post of publicacionesUsuario" size="4">
+        <img src="{{post.urlImagen}}" alt="{{post.descripcionPost}}">
+       <!-- <img src="../../assets/images/{{post.urlImagen}}">-->
+      </ion-col>
+     </ion-row>
+      
+
+    </ion-grid>
+
+  </ion-col>
+</ion-row>

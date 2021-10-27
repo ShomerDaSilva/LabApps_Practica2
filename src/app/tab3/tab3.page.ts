@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import datosUsuario from '../../feed.json';
 
 import {map} from 'rxjs/operators';
-import { ThrowStmt } from '@angular/compiler';
+//import { ThrowStmt } from '@angular/compiler';
+import { DatabaseService } from '../database.service';
 
 
 interface Usuario {
@@ -46,34 +47,21 @@ export class Tab3Page  implements OnInit {
     this.publicaciones = params;
   }
   obtenerPublicaciones() : void {
-    this.http.get('https://instaclone-3059b-default-rtdb.firebaseio.com/publicaciones.json')
-    .pipe(
-      map(responseData => {
-        
-        for(const key in responseData) {
-          this.publicaciones.push({ ...responseData[key], key});
-        } return this.publicaciones;
-      })
-    ).subscribe(responseData => {
-      console.log(responseData);
-     })
+    this.firebaseRequests.getPublicaciones().subscribe(res => {
+      this.publicaciones = res;
+    })
     
   }
 
   agregarAusuario(params): void {
-    this.http.post('https://instaclone-3059b-default-rtdb.firebaseio.com/usuario/publicaciones.json', params).subscribe(
-      responseData => {
-        console.log(responseData);
-
-        this.obtenerPublicaciones();
-      }
-    )
+   
   }
 
-  agregarPublicacion(infoPublicacion :{ usuario: string, descripcionPost: String, urlImagen: string}): void {
-    this.http.post('https://instaclone-3059b-default-rtdb.firebaseio.com/publicaciones.json', infoPublicacion).subscribe(responseData => {
-      console.log(responseData);
-    }); 
+  agregarPublicacion(infoPublicacion: { usuario: string, descripcionPost: String, urlImagen: string}): void {
+    this.firebaseRequests.postPublicacion(infoPublicacion).subscribe(res => {
+      let params = Object.assign(res, this.infoTest);
+      console.log(params);
+    })
   }
 
   toggleFollow(): void {
@@ -84,6 +72,8 @@ export class Tab3Page  implements OnInit {
     this.obtenerPublicaciones();
   }
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient, //se puede eliminar una vez que sustituyamos todo por el service
+    private firebaseRequests: DatabaseService) {}
 
 }

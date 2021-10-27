@@ -8,6 +8,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 import { PublicacionesComponent } from '../publicaciones/publicaciones.component';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { HistoriasComponentModule } from '../historias/historias.module';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { Tab1PageRoutingModule } from './tab1-routing.module';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
+    HistoriasComponentModule,
     Tab1PageRoutingModule
   ],
   declarations: [Tab1Page, PublicacionesComponent]
