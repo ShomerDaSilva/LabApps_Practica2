@@ -8,34 +8,29 @@ import { AppComponent } from './app.component';
 
 //Firebase App
 import { environment } from 'src/environments/environment';
-import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+//import { provideFirebaseApp, getApp, initializeApp } from '@angular/fire/app';
 import { AngularFireModule } from '@angular/fire/compat';
+
+//Cloud Storage
 
 
 //HTTP
 import { HttpClientModule } from '@angular/common/http';
 
+//
+//import { PublicacionesComponent } from './publicaciones/publicaciones.component';
+
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [],
+  entryComponents: [
+    //PublicacionesComponent
+  ],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
-    HttpClientModule,
-    // provideFirebaseApp(() => initializeApp({
-    //   apiKey: "AIzaSyCTChXghrrk6eZvh1XXKCR_q34wQQK1Luc",
-//authDomain: "instaclone-73f6e.firebaseapp.com",
-   // projectId: "instaclone-73f6e",
-    //storageBucket: "instaclone-73f6e.appspot.com",
-   // messagingSenderId: "870836869693",
-    //appId: "1:870836869693:web:b056b93a61857d3a13e854"
-    // })),
-    // provideFirestore(() => getFirestore())
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    HttpClientModule, 
+    AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

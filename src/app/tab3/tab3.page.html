@@ -16,24 +16,28 @@
   <ion-grid>
     <ion-row class="usuario">
       <ion-col>
-        <img src="../../assets/images/{{usuario.avatar}}" alt="Perfil" id="profile">
+        <div id="profilepicBorde">
+          <img src="../../assets/images/{{usuario.avatar}}" alt="foto de perfil" id="profilepic">
+        </div>
       </ion-col>
+
       <ion-col class="datos">
         <ion-label class="bold">{{usuario.posts}}</ion-label>
         <ion-label>Posts</ion-label>
-
       </ion-col>
+
       <ion-col class="datos">
-        <ion-label class="bold">{{usuario.seguidores}}</ion-label>
+        <ion-label class="bold">{{usuario.seguidores}} </ion-label>
         <ion-label>Followers</ion-label>
       </ion-col>
 
       <ion-col class="datos">
-        <ion-label class="bold">{{usuario.siguiendo}}</ion-label>
+        <ion-label class="bold"> {{usuario.siguiendo}} </ion-label>
         <ion-label>Following</ion-label>
       </ion-col>
 
     </ion-row>
+
 
     <ion-row class="descripcion">
       <ion-col>
@@ -41,42 +45,48 @@
           Max
         </ion-label>
         <ion-label>
-          {{usuario.bio}}   
-          <bl>
-            <a href="https://bongo.cat/">Click Me!</a>
-          </bl>
+          {{usuario.bio}}
+          <br>
+          <a href="#">Link</a>
         </ion-label>
-        <ion-button fill="outline" *ngIf="esUsuario">Edit Profile</ion-button>
-        <ion-grid *ngIf="!esUsuario">
+        <!--<ion-button *ngIf="esUsuario" fill="outline">Editar Perfil</ion-button>-->
+
+        <ion-grid>
           <ion-row>
-            <ion-col size="3" >
-              <ion-button fill="outline">Seguir</ion-button>
+            <ion-col size="4">
+              <ion-button fill="outline" (click)="toggleFollow()">{{siguiendo ? 'Seguir': 'Dejar de Seguir' }}</ion-button>
             </ion-col>
-            <ion-col size="3" >
+            <ion-col size="3">
               <ion-button fill="outline">Mensaje</ion-button>
             </ion-col>
-            <ion-col size="3" >
+            <ion-col size="3">
               <ion-button fill="outline">Email</ion-button>
             </ion-col>
-            <ion-col size="3" >
+            <ion-col size="2">
               <ion-button fill="outline"><ion-icon name="chevron-down-outline"></ion-icon></ion-button>
             </ion-col>
           </ion-row>
+          <ion-row>
+            <ion-button fill="outline" (click)="agregarPublicacion(infoTest)">Agregar Publicacion</ion-button>
+            <ion-button fill="outline" (click)="obtenerPublicaciones()">Obtener Publicaciones</ion-button>
+          </ion-row>
         </ion-grid>
+
       </ion-col>
     </ion-row>
 
     <ion-row id="posts">
-      <ion-col class="inner-posts" >
+      <ion-col class="inner-posts">
+
         <ion-grid>
-          <ion-row>
-            <ion-col *ngFor="let post of usuario.publicaciones" size="4">
-              <img src="../../assets/images/{{post}}">
-            </ion-col>
-          </ion-row>
+         <ion-row>
+          <ion-col *ngFor="let post of publicaciones" size="4">
+            <img src="../../assets/images/{{post.urlImagen}}">
+          </ion-col>
+         </ion-row>
+          
+
         </ion-grid>
-
-
 
       </ion-col>
     </ion-row>
